@@ -16,7 +16,8 @@ let g:vim_printer_items = {
             \ 'javascript.jsx': 'console.log("{$}:", {$})',
             \ 'typescipt': 'console.log("{$}:", {$})',
             \ 'go': 'fmt.Println("{$}:", {$})',
-            \ 'vim': 'echo "{$}: ".{$}'
+            \ 'vim': 'echo "{$}: ".{$}',
+            \ 'rust': 'println!("{$}: {}", {$})'
             \ }
 
 let s:print_below_keybinding = get(g:, 'g:vim_printer_print_below_keybinding', '<leader>p')
