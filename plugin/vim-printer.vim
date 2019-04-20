@@ -10,18 +10,24 @@ if exists('g:loaded_vim_printer') || &compatible
 endif
 let g:loaded_vim_printer = 1
 
-let g:vim_printer_items = { 
+let s:vim_printer_items_full = { 
             \ 'python': 'print("{$}:", {$})', 
             \ 'javascript': 'console.log("{$}:", {$})',
             \ 'javascript.jsx': 'console.log("{$}:", {$})',
             \ 'typescipt': 'console.log("{$}:", {$})',
+            \ 'typescipt.tsx': 'console.log("{$}:", {$})',
             \ 'go': 'fmt.Println("{$}:", {$})',
             \ 'vim': 'echo "{$}: ".{$}',
             \ 'rust': 'println!("{$}: {}", {$})'
             \ }
 
-let s:print_below_keybinding = get(g:, 'g:vim_printer_print_below_keybinding', '<leader>p')
-let s:print_above_keybinding = get(g:, 'g:vim_printer_print_above_keybinding', '<leader>P')
+let g:vim_printer_items = get(g:, 'vim_printer_items', {})
+for pi in keys(g:vim_printer_items)
+  let s:vim_printer_items_full[pi] = g:vim_printer_items[pi]
+endfor
+
+let s:print_below_keybinding = get(g:, 'vim_printer_print_below_keybinding', '<leader>p')
+let s:print_above_keybinding = get(g:, 'vim_printer_print_above_keybinding', '<leader>P')
 
 
 " i am not sure if this is the right way to do it
@@ -39,18 +45,22 @@ endfunction
 
 function! AddPrintLine(visual, above)
 
-    if a:visual == 1
-        let exp = s:GetVisualSelection()
-    else
-        let exp = expand('<cword>')
-    endif
-
     let filetype = &filetype
-    let ns = substitute(g:vim_printer_items[filetype], '{$}', exp, 'g')
-    if a:above == 1
-        call append(line('.') - 1, ns)
+    if has_key(s:vim_printer_items_full, filetype)
+      if a:visual == 1
+          let exp = s:GetVisualSelection()
+      else
+          let exp = expand('<cword>')
+      endif
+
+      let ns = substitute(s:vim_printer_items_full[filetype], '{$}', exp, 'g')
+      if a:above == 1
+          call append(line('.') - 1, ns)
+      else
+          call append(line('.'), ns)
+      endif
     else
-        call append(line('.'), ns)
+      echo 'No vim-printer defention available for '. filetype
     endif
 endfunction
 
