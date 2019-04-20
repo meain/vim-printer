@@ -53,19 +53,11 @@ function! AddPrintLine(visual, above)
           let exp = expand('<cword>')
       endif
 
-      let s:indent_level = indent('.')
-
       let ns = substitute(s:vim_printer_items_full[filetype], '{$}', exp, 'g')
       if a:above == 1
-          execute ':normal! miO' . ns
-          " normal! `i
-          " call append(line('.') - 1, ns)
-          " execute 'normal! k'.s:indent_level.'>>j'
+          execute ':normal! O' . ns
       else
-          execute ':normal! mio' . ns
-          " normal! `i
-          " call append(line('.'), ns)
-          " execute 'normal! j'.s:indent_level.'>>k'
+          execute ':normal! o' . ns
       endif
     else
       echo 'No vim-printer defention available for '. filetype
