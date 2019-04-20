@@ -56,8 +56,10 @@ function! AddPrintLine(visual, above)
       let ns = substitute(s:vim_printer_items_full[filetype], '{$}', exp, 'g')
       if a:above == 1
           call append(line('.') - 1, ns)
+          normal! k==j
       else
           call append(line('.'), ns)
+          normal! j==k
       endif
     else
       echo 'No vim-printer defention available for '. filetype
