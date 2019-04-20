@@ -29,6 +29,18 @@ let g:vim_printer_print_below_keybinding = '<leader>p'
 let g:vim_printer_print_above_keybinding = '<leader>P'
 ```
 
+You can add new languages own your own by using.
+The ones you add will be combined with the existing ones.
+
+> The text inside `{$}` will be replaced by the variable
+
+```
+let g:vim_printer_items = {
+      \ 'javascript': 'console.log("{$}:", {$})',
+      \ }
+```
+
+
 
 ## Future TODO
 
