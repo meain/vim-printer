@@ -28,3 +28,9 @@ It will be used both in normal mode and visual mode.
 let g:vim_printer_print_below_keybinding = '<leader>p'
 let g:vim_printer_print_above_keybinding = '<leader>P'
 ```
+
+
+## Future TODO
+
+- add some kind of debug mode print
+    eg: `logging.log()` in python or `println!('{:?}', var)` in rust
