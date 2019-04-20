@@ -1,10 +1,10 @@
 # vim-printer
 
-Quickly print/log the variable in your favorite language
+Quickly print/log the variable in your favourite language
 
 ## Installation
 
-Use your favorite plugin manager to install. I use `vim-plug`.
+Use your favourite plugin manager to install. I use `vim-plug`.
 
 ```
 Plug 'meain/vim-printer'
