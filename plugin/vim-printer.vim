@@ -10,6 +10,15 @@ if exists('g:loaded_vim_printer') || &compatible
 endif
 let g:loaded_vim_printer = 1
 
+let g:vim_printer_items = { 
+            \ 'python': 'print("{$}:", {$})', 
+            \ 'javascript': 'console.log("{$}:", {$})',
+            \ 'javascript.jsx': 'console.log("{$}:", {$})',
+            \ 'typescipt': 'console.log("{$}:", {$})',
+            \ 'go': 'fmt.Println("{$}:", {$})',
+            \ 'vim': 'echo "{$}: ".{$}',
+            \ 'rust': 'println!("{$}: {}", {$})'
+            \ }
 
 let s:print_below_keybinding = get(g:, 'g:vim_printer_print_below_keybinding', '<leader>p')
 let s:print_above_keybinding = get(g:, 'g:vim_printer_print_above_keybinding', '<leader>P')
