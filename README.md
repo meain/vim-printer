@@ -18,3 +18,13 @@ In normal mode it works on current word under cursor and in visual mode it works
 - `<leader>p` to add print/log statement below current line
 - `<leader>P` to add print/log statement above current line
 
+
+## Configuration
+
+You can change the default keybindings like below.
+It will be used both in normal mode and visual mode.
+
+```
+let g:vim_printer_print_below_keybinding = '<leader>p'
+let g:vim_printer_print_above_keybinding = '<leader>P'
+```
