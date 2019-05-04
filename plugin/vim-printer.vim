@@ -18,7 +18,8 @@ let s:vim_printer_items_full = {
             \ 'typescipt.tsx': 'console.log("{$}:", {$})',
             \ 'go': 'fmt.Println("{$}:", {$})',
             \ 'vim': 'echo "{$}: ".{$}',
-            \ 'rust': 'println!("{$}: {}", {$})'
+            \ 'rust': 'println!("{$}: {}", {$});',
+            \ 'sh': 'echo "{$}" "${$}"'
             \ }
 
 let g:vim_printer_items = get(g:, 'vim_printer_items', {})
