@@ -1,5 +1,7 @@
 # vim-printer
 
+![](https://i.imgur.com/9ptxO4c.gif)
+
 Quickly print/log the variable in your favourite language
 
 ## Installation
