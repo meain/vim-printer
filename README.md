@@ -46,3 +46,10 @@ let g:vim_printer_items = {
 
 - add some kind of debug mode print
     eg: `logging.log()` in python or `println!('{:?}', var)` in rust
+    
+    
+    
+## Alternatives
+
+
+- [vim-printf](https://github.com/mptre/vim-printf)
