@@ -1,7 +1,7 @@
 " ============================================================================
 " File:        vim-printer.vim
 " Author:      Abin Simon
-" Description: Easily out variables in any language
+" Description: Easily print out variables in any language
 " License:     MIT
 " ============================================================================
 
