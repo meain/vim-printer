@@ -19,7 +19,9 @@ let s:vim_printer_items_full = {
             \ 'go': 'fmt.Println("{$}:", {$})',
             \ 'vim': 'echo "{$}: ".{$}',
             \ 'rust': 'println!("{$}: {:?}", {$});',
-            \ 'sh': 'echo "{$}" "${$}"'
+            \ 'sh': 'echo "{$}" "${$}"',
+            \ 'bash': 'echo "{$}" "${$}"',
+            \ 'zsh': 'echo "{$}" "${$}"'
             \ }
 
 let g:vim_printer_items = get(g:, 'vim_printer_items', {})
