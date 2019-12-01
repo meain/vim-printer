@@ -22,6 +22,12 @@ let s:vim_printer_items_full = {
             \ 'sh': 'echo "{$}" "${$}"',
             \ 'bash': 'echo "{$}" "${$}"',
             \ 'zsh': 'echo "{$}" "${$}"'
+            \ 'java': 'System.out.println("{$}:" + {$});'
+            \ 'lua': 'print("{$}:", {$})'
+            \ 'swift': 'print("{$}:", {$})'
+            \ 'matlab': 'fprintf("{$}:%i\n", {$})'
+            \ 'php': 'print {$}:“,${$};'
+            \ 'cpp': 'std::cout << "{$}:" << {$} << "\n";'
             \ }
 
 let g:vim_printer_items = get(g:, 'vim_printer_items', {})
