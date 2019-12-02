@@ -10,12 +10,12 @@ if exists('g:loaded_vim_printer') || &compatible
 endif
 let g:loaded_vim_printer = 1
 
-let s:vim_printer_items_full = { 
-            \ 'python': 'print("{$}:", {$})', 
-            \ 'javascript': 'console.log("{$}:", {$})',
-            \ 'javascript.jsx': 'console.log("{$}:", {$})',
-            \ 'typescipt': 'console.log("{$}:", {$})',
-            \ 'typescript.tsx': 'console.log("{$}:", {$})',
+let s:vim_printer_items_full = {
+            \ 'python': 'print("{$}:", {$})',
+            \ 'javascript': 'console.log("{$}:", {$});',
+            \ 'javascript.jsx': 'console.log("{$}:", {$});',
+            \ 'typescipt': 'console.log("{$}:", {$});',
+            \ 'typescript.tsx': 'console.log("{$}:", {$});',
             \ 'go': 'fmt.Println("{$}:", {$})',
             \ 'vim': 'echo "{$}: ".{$}',
             \ 'rust': 'println!("{$}: {:?}", {$});',
