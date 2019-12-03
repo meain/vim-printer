@@ -11,12 +11,12 @@ endif
 let g:loaded_vim_printer = 1
 
 let s:vim_printer_items_full = { 
-            \ 'python': 'print("{$}:", {$})', 
-            \ 'javascript': 'console.log("{$}:", {$})',
-            \ 'javascript.jsx': 'console.log("{$}:", {$})',
-            \ 'typescipt': 'console.log("{$}:", {$})',
-            \ 'typescript.tsx': 'console.log("{$}:", {$})',
-            \ 'go': 'fmt.Println("{$}:", {$})',
+            \ 'python': 'print("{$}: ", {$})', 
+            \ 'javascript': 'console.log("{$}: ", {$})',
+            \ 'javascript.jsx': 'console.log("{$}: ", {$})',
+            \ 'typescript': 'console.log("{$}: ", {$})',
+            \ 'typescript.tsx': 'console.log("{$}: ", {$})',
+            \ 'go': 'fmt.Println("{$}: ", {$})',
             \ 'vim': 'echo "{$}: ".{$}',
             \ 'rust': 'println!("{$}: {:?}", {$});',
             \ 'sh': 'echo "{$}" "${$}"',
