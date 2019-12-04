@@ -21,7 +21,9 @@ let s:vim_printer_items_full = {
             \ 'rust': 'println!("{$}: {:?}", {$});',
             \ 'sh': 'echo "{$}" "${$}"',
             \ 'bash': 'echo "{$}" "${$}"',
-            \ 'zsh': 'echo "{$}" "${$}"'
+            \ 'zsh': 'echo "{$}" "${$}"',
+            \ 'f77': 'write(6,*)"{$}", {$}',
+            \ 'f90': 'write(6,*)"{$}", {$}' 
             \ }
 
 let g:vim_printer_items = get(g:, 'vim_printer_items', {})
