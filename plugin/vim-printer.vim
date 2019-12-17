@@ -19,9 +19,9 @@ let s:vim_printer_items_full = {
             \ 'go': 'fmt.Println("{$}:", {$})',
             \ 'vim': 'echo "{$}: ".{$}',
             \ 'rust': 'println!("{$}: {:?}", {$});',
-            \ 'sh': 'echo "{$}" "${$}"',
-            \ 'bash': 'echo "{$}" "${$}"',
-            \ 'zsh': 'echo "{$}" "${$}"',
+            \ 'sh': 'echo "{$}: " "${$}"',
+            \ 'bash': 'echo "{$}: " "${$}"',
+            \ 'zsh': 'echo "{$}: " "${$}"',
             \ 'f77': 'write(6,*)"{$}: ", {$}',
             \ 'f90': 'write(6,*)"{$}: ", {$}' 
             \ }
