@@ -65,7 +65,7 @@ function! AddPrintLine(visual, above)
           execute ':normal! o' . ns
       endif
     else
-      echo 'No vim-printer defention available for '. filetype
+      echo 'No vim-printer definition available for '. filetype
     endif
 endfunction
 
